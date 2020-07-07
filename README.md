@@ -69,13 +69,14 @@ Use HTML, CSS, and JavaScript (choose one of popular framework) to implement the
 
 ### Tech stack
 
-- JS oriented
+- JS oriented (Typescript preferred)
 - Use **React**, **Angular** or **VUE**.
 - Use unsplash.com to show random avatar images
 - You don't have to write configuration from scratch (you can use eg. CRA for React application)
 - Feel free to use a preprocessor like SASS/SCSS/Less or CSS in JS
 - Provide E2E and unit tests
 - Feel free to choose MAPS service (GoogleMaps, OpenStreetMap etc)
+- Please **do not** use any additional libraries with predefined styles like `react-bootstrap`, `material-ui` etc.
 
 ### Bonus
 
@@ -85,7 +86,7 @@ Use HTML, CSS, and JavaScript (choose one of popular framework) to implement the
 - Provide an online demo of the application.
 - Include subtle animations to focus attention
 - Describe optimization opportunities when you conclude
-- Handle server erros
+- Handle server errors
 - Handle loading states
 
 ## What We Care About
