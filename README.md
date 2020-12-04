@@ -4,7 +4,7 @@ Be sure to read **all** of this document carefully, and follow the guidelines wi
 
 ## Backend Context
 
-Build a GraphQL API that can `create/read/update/delete` user data from a persistence store.
+Build a GraphQL API that can `create/read/update` user data from a persistence store. Delete functionality is not required.
 
 ### User Model
 
@@ -22,24 +22,25 @@ Build a GraphQL API that can `create/read/update/delete` user data from a persis
 
 ### Functionality
 
-- The API should follow typical GraphQL API design pattern.
-- The data should be saved in the DB.
-- Proper error handling should be used.
+- The API should follow typical GraphQL API design pattern
+- The data should be saved in the DB
+- Proper error handling should be used
 - Paginating and filtering (by name) users list
 
 ### Basic Requirements
 
-  - Use AWS AppSync (preferred) or AWS Lambda + API Gateway approach
+  - Use **AWS AppSync (preferred)** or AWS Lambda + API Gateway approach
   - Use any AWS Database-as-a-Service persistence store. DynamoDB is preferred.
+  - Write concise and clear commit messages
+  - Write clear **documentation** on how it has been designed and how to run the code
   - Add a Query to fetch location information based off the user's address (use [NASA](https://api.nasa.gov/api.html) or [Mapbox](https://www.mapbox.com/api-documentation/) APIs); use AWS Lambda
-  - Write concise and clear commit messages.
-  - Write clear **documentation** on how it has been designed and how to run the code.
 
-### Bonus
-  - Use Infrastructure-as-code tooling that can be used to deploy all resources to an AWS account. Examples: CloudFormation / SAM, Terraform, Serverless Framework, etc.
-  - Provide proper unit tests.
-  - Providing an online demo is welcomed, but not required.
-  - Bundle npm modules into your Lambdas
+### Bonus (in order)
+  1. Use Infrastructure-as-code tooling that can be used to deploy all resources to an AWS account. Examples: CloudFormation / SAM, Terraform, Serverless Framework, etc.
+  1. Provide proper unit tests
+  1. Providing an online demo is welcomed, but not required
+  1. Delete user functionality
+  1. Bundle npm modules into your Lambdas
 
 ### Advanced Requirements
 
@@ -63,31 +64,33 @@ Use HTML, CSS, and JavaScript (choose one of popular framework) to implement the
 
 - The search functionality should perform real time filtering on client side data and API side data
 - List of users should be updated automatically after single user is updated
-- Infinite loading state should be saved in url query
+- Create modal from scratch - please don't use any library for it
 - Appear/Disappear of modal should be animated (feel free with choose how)
-- Map with user location should update async - when user changes "location" field
+- Infinite loading state should be saved in url query (pagination state should be present in URL query (eg ?page=1) to allow for behavior where the user can reload the page while still returning to their current scroll position)
 
 ### Tech stack
 
 - JS oriented (Typescript preferred)
-- Use **React**, **Angular** or **VUE**.
+- Use **React**, **Angular** or **VUE** (React preferred)
 - Use unsplash.com to show random avatar images
 - You don't have to write configuration from scratch (you can use eg. CRA for React application)
 - Feel free to use a preprocessor like SASS/SCSS/Less or CSS in JS
-- Provide E2E and unit tests
-- Feel free to choose MAPS service (GoogleMaps, OpenStreetMap etc)
+- Provide E2E and unit tests (one component&view well tested is enough, no need to test every component/view)
 - Please **do not** use any additional libraries with predefined styles like `react-bootstrap`, `material-ui` etc.
 
-### Bonus
+### Bonus (in order)
 
-- Write clear **documentation** on how the app was designed and how to run the code.
-- Provide components in [Storybook](https://storybook.js.org) with tests.
-- Write concise and clear commit messages.
-- Provide an online demo of the application.
-- Include subtle animations to focus attention
-- Describe optimization opportunities when you conclude
-- Handle server errors
-- Handle loading states
+1. Write clear **documentation** on how the app was designed and how to run the code
+1. Providing an online demo is welcomed, but not required.
+1. Provide a description of how you approach mobile friendly apps (what do you use, how)
+1. Write concise and clear commit messages.
+1. Provide components in [Storybook](https://storybook.js.org) with tests.
+1. Include subtle animations to focus attention
+1. Describe optimization opportunities when you conclude
+1. Map with user location should update async - when user changes "location" field (feel free to choose MAPS service e.g. GoogleMaps, OpenStreetMap)
+1. Handle server errors
+1. Handle loading states
+1. Delete user functionality
 
 ## What We Care About
 
@@ -102,7 +105,6 @@ Here's what you should strive for:
 - Extensible code.
 
 ## Q&A
-
 > Where should I send back the result when I'm done?
 
 Fork this repo and send us a pull request when you think you are done. There is no deadline for this task unless otherwise noted to you directly.
@@ -110,3 +112,19 @@ Fork this repo and send us a pull request when you think you are done. There is 
 > What if I have a question?
 
 Create a new issue in this repo and we will respond and get back to you quickly.
+
+> Should I validate inputs?
+
+Please assume a hard requirement has not been set by the product owner. We welcome any input validations and your reasoning for why they add value.
+
+> What is the location format?
+
+Examples:
+- Seattle, Washington
+- Digital Nomad
+- New Jersey
+- Northern Bergen County, NJ
+
+> I almost finished, but I don't have time to create everything what is required
+
+Please provide a plan for the rest of the things that you would do.
