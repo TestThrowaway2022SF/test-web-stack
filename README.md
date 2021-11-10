@@ -1,6 +1,8 @@
-# Superformula Full Stack Developer Test
+# Superformula Web Developer Test
 
 Be sure to read **all** of this document carefully, and follow the guidelines within.
+
+While this README assumes you implement both backend and frontend, only frontend context is required if you apply for Front-end position. To better showcase your skills and experience we encourage you to complete both "UI Context" and "Backend Context" parts depending on your time availability. In case you decide not to implement backend according to spec, feel free to implement mock api to accompany your frontend work.
 
 ## Backend Context
 
