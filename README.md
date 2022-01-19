@@ -4,6 +4,12 @@ Be sure to read **all** of this document carefully, and follow the guidelines wi
 
 While this README assumes you implement both backend and frontend, only frontend context is required if you apply for Front-end position. To better showcase your skills and experience we encourage you to complete both "UI Context" and "Backend Context" parts depending on your time availability. In case you decide not to implement backend according to spec, feel free to implement mock api to accompany your frontend work.
 
+- **Please remember to update README with instructions on how to run a project. Ideally, we should be able to run it with one command. Please also include all required environment variables, or send them by email.**
+
+- **After opening a pull request, please email us a link to it.**
+
+- If you have anything that you would like to improve in your app in case of more time, feel free to add “Improvements” section in README and outline it all there.
+
 ## Backend Context
 
 Build a GraphQL API that can `create/read/update` user data from a persistence store. Delete functionality is not required.
@@ -52,7 +58,7 @@ These may be used for further challenges. You can freely skip these; feel free t
 
 ## UI context
 
-Use HTML, CSS, and JavaScript (choose one of popular framework) to implement the following mock-up. You are only required to complete the desktop views, unless otherwise instructed. Application should connect to created GraphQL API.
+Use HTML, CSS, and JavaScript (choose one of popular framework) to implement the following mock-up. You are only required to complete the desktop views, unless otherwise instructed. Application should connect to created GraphQL API. If you have a limited amount of time, it is preferred you create one fully covered feature (including accessibility, unit tests, e2e tests, storybook stories, e.g. edit user functionality) instead of the partially implemented whole app.
 
 ![Superformula-front-end-test-mockup](./mockup1.png)
 
@@ -82,11 +88,11 @@ Use HTML, CSS, and JavaScript (choose one of popular framework) to implement the
 
 ### Bonus (in order)
 
-1. Write clear **documentation** on how the app was designed and how to run the code
-1. Providing an online demo is welcomed, but not required.
+1. Providing an online demo is welcomed (e.g. using Vercel or Netlify)
+1. Write documentation on how the app was designed
 1. Provide a description of how you approach mobile friendly apps (what do you use, how)
-1. Write concise and clear commit messages.
-1. Provide components in [Storybook](https://storybook.js.org) with tests.
+1. Write concise and clear commit messages
+1. Provide components in [Storybook](https://storybook.js.org) with tests
 1. Include subtle animations to focus attention
 1. Describe optimization opportunities when you conclude
 1. Map with user location should update async - when user changes "location" field (feel free to choose MAPS service e.g. GoogleMaps, OpenStreetMap)
@@ -95,6 +101,7 @@ Use HTML, CSS, and JavaScript (choose one of popular framework) to implement the
 1. Delete user functionality
 
 ## What We Care About
+We expect you treat this assignment as if it were a production app with everything implied you do in a production grade project.
 
 Use any libraries that you would normally use if this were a real production App. Please note: we're interested in your code & the way you solve the problem, not how well you can use a particular library or feature.
 
@@ -102,9 +109,10 @@ _We're interested in your method and how you approach the problem just as much a
 
 Here's what you should strive for:
 
-- Good use of current HTML, CSS, JavaScript, Node.js & performance best practices.
-- Solid testing approach.
-- Extensible code.
+- **Application to look the same as designs (sizes, spacings, fonts, icons, etc), with attention to details.**
+- Good use of current HTML, CSS, JavaScript/Typescript, Node.js & performance best practices
+- Solid testing approach
+- Extensible code
 
 ## Q&A
 > Where should I send back the result when I'm done?
