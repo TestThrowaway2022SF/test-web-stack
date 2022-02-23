@@ -138,3 +138,7 @@ Examples:
 > I almost finished, but I don't have time to create everything what is required
 
 Please provide a plan for the rest of the things that you would do.
+
+> I want to remain privacy of my submission and not expose it in my GitHub account
+
+Feel free to create new GitHub account and open a PR from it.
