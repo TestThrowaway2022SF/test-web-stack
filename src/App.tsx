@@ -1,25 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
 
-function App() {
+import UserListView from "views/UserListView";
+import Modal from "components/molecules/Modal";
+import ModalContext from "contexts/ModalContext";
+import useModal from "hooks/useModal";
+
+import FauxAPI from "api/FauxAPI";
+import defaultUsers from "data/users";
+
+
+const App = () => {
+  const modalConfig = useModal({
+    isOpen: false,
+    content: null
+  });
+
+  const [ready, setReady] = useState<boolean>(false);
+
+  useEffect(() => {
+    const rawUsersData = window.localStorage.getItem('usersData');
+
+    if (!rawUsersData) {
+      FauxAPI.setUsers(defaultUsers);
+    }
+
+    setReady(true);
+  }, [setReady]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ModalContext.Provider value={modalConfig}>
+      <div>
+        {
+          ready ? (
+            <UserListView />
+          ) : (
+            <div>
+              Initialing...
+            </div>
+          )
+        }
+        <Modal
+          isOpen={modalConfig.isOpen}
+          onClose={modalConfig.close}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          { modalConfig.content }
+        </Modal>
+      </div>
+    </ModalContext.Provider>
   );
 }
 
